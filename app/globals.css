@@ -1,0 +1,26 @@
+@tailwind utilities;
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #1e1e2e 0%, #0f0f23 100%);
+  --card-bg: rgba(30, 30, 46, 0.8);
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: white;
+  min-height: 100vh;
+}
+
+.beginner-ui {
+  --card-bg: rgba(30, 30, 46, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.advanced-ui {
+  --card-bg: rgba(15, 15, 35, 0.95);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
