@@ -66,7 +66,48 @@ ensureKnowledgeBaseInitialized();
 // Инициализация тестовыми данными (вызывается один раз при старте)
 export function initKnowledgeBase() {
   kb.addTriple("Квантовая механика", "explains", "Запутанность");
-  kb.addTriple("Запутанность", "relatedTo", "Эксперимент Белла");
-  kb.addTriple("Альберт Эйнштейн", "criticizes", "Запутанность");
+  kb.addTriple("Квантовая механика", "explains", "Суперпозиция");
+  kb.addTriple("Квантовая механика", "explains", "Декогеренция");
+  kb.addTriple("Квантовая механика", "relatedTo", "Теория относительности");
+  kb.addTriple("Квантовая механика", "contradicts", "Классическая физика");
+
+  kb.addTriple("Альберт Эйнштейн", "criticized", "Запутанность");
+  kb.addTriple("Альберт Эйнштейн", "discovered", "Теория относительности");
+  kb.addTriple("Альберт Эйнштейн", "coauthored", "EPR парадокс");
+  kb.addTriple("Нильс Бор", "debatedWith", "Альберт Эйнштейн");
+  kb.addTriple("Нильс Бор", "developed", "Квантовая механика");
+  kb.addTriple("Эрвин Шрёдингер", "discovered", "Уравнение Шрёдингера");
+  kb.addTriple("Эрвин Шрёдингер", "proposed", "Кот Шрёдингера");
+  kb.addTriple("Джон Белл", "proved", "Теорема Белла");
+  kb.addTriple("Вернер Гейзенберг", "discovered", "Принцип неопределённости");
+
+  kb.addTriple("Запутанность", "demonstratedBy", "Эксперимент Белла");
   kb.addTriple("Эксперимент Белла", "prerequisite", "Квантовая механика");
+  kb.addTriple("EPR парадокс", "relatedTo", "Запутанность");
+  kb.addTriple("EPR парадокс", "resolvedBy", "Теорема Белла");
+  kb.addTriple("Кот Шрёдингера", "illustrates", "Суперпозиция");
+  kb.addTriple("Двойная щель", "demonstrates", "Интерференция частиц");
+  kb.addTriple("Двойная щель", "relatedTo", "Квантовая механика");
+
+  kb.addTriple("Запутанность", "usedIn", "Квантовая криптография");
+  kb.addTriple("Запутанность", "usedIn", "Квантовая телепортация");
+  kb.addTriple("Суперпозиция", "usedIn", "Квантовые компьютеры");
+  kb.addTriple("Квантовые компьютеры", "basedOn", "Квантовая механика");
+  kb.addTriple("Квантовая криптография", "provides", "Безопасная связь");
+  kb.addTriple("Квантовая телепортация", "transfers", "Квантовые состояния");
+
+  kb.addTriple("Теория относительности", "contradicts", "Запутанность");
+  kb.addTriple("Принцип неопределённости", "relatedTo", "Суперпозиция");
+  kb.addTriple("Интерференция частиц", "explains", "Волновая функция");
+  kb.addTriple("Волновая функция", "collapsedBy", "Измерение");
+  kb.addTriple("Измерение", "causes", "Декогеренция");
+  kb.addTriple("Декогеренция", "resolves", "Кот Шрёдингера");
+  kb.addTriple("Кот Шрёдингера", "thoughtExperimentBy", "Эрвин Шрёдингер");
+  kb.addTriple("Теорема Белла", "violates", "Локальный реализм");
+  kb.addTriple("Локальный реализм", "supportedBy", "Альберт Эйнштейн");
+
+  kb.addTriple("Нильс Бор", "interpreted", "Копенгагенская интерпретация");
+  kb.addTriple("Копенгагенская интерпретация", "explains", "Измерение");
+  kb.addTriple("Много миров интерпретация", "alternativeTo", "Копенгагенская интерпретация");
+  kb.addTriple("Много миров интерпретация", "proposedBy", "Хью Эверетт");
 }

@@ -13,7 +13,9 @@ export default function KnowledgeGraph({ nodes }: Props) {
   useEffect(() => {
     if (!containerRef.current || nodes.length === 0) return;
 
-    const graphNodes = new DataSet(nodes.map((id) => ({ id, label: id, color: "#4f46e5" })));
+    const graphNodes = new DataSet(
+      nodes.map((id) => ({ id, label: id, color: "#ffffff", font: { color: "#000000", weight: "bold" } })),
+    );
     const graphEdges = new DataSet([]);
 
     const network = new Network(
